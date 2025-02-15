@@ -1,40 +1,44 @@
 package org.example;
 
+import java.sql.Date;
+
 public class CarRental {
 
     // define the properties
-    private CustomerDetails customer =null;
-    private CarDetails car =null;
+    private int customerId = 0;
+    private int carId = 0;
     private int noOfDays =0;
+    private Date ReturnDate = null;
+    private Date RentalDate = null;
 
     // define the constructor
 
     public CarRental() {
     }
 
-    public CarRental(CustomerDetails customer, CarDetails car, int noOfDays) {
-        this.customer = customer;
-        this.car = car;
+    public CarRental(int customerId, int carId, int noOfDays, Date ReturnDate, Date RentalDate) {
+        this.customerId = customerId;
+        this.carId = carId;
         this.noOfDays = noOfDays;
+        this.RentalDate = RentalDate;
     }
 
+    // define the getter and setter() methord
 
-    // define the getter() and setter() methord
-
-    public CustomerDetails getCustomer() {
-        return this.customer;
+    public int getCustomerId() {
+        return this.customerId;
     }
 
-    public void setCustomer(CustomerDetails customer) {
-        this.customer = customer;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public CarDetails getCar() {
-        return this.car;
+    public int getCarId() {
+        return this.carId;
     }
 
-    public void setCar(CarDetails car) {
-        this.car = car;
+    public void setCarId(int carId) {
+        this.carId = carId;
     }
 
     public int getNoOfDays() {
@@ -45,18 +49,36 @@ public class CarRental {
         this.noOfDays = noOfDays;
     }
 
+    public Date getReturnDate() {
+        return this.ReturnDate;
+    }
+
+    public void setReturnDate(Date ReturnDate) {
+        this.ReturnDate = ReturnDate;
+    }
+
+    public Date getRentalDate() {
+        return this.RentalDate;
+    }
+
+    public void setRentalDate(Date RentalDate) {
+        this.RentalDate = RentalDate;
+    }
+
 
     // define the toString() methord
 
     @Override
     public String toString() {
         return "{" +
-            " customer='" + getCustomer() + "'" +
-            ", car='" + getCar() + "'" +
+            " customerId='" + getCustomerId() + "'" +
+            ", carId='" + getCarId() + "'" +
             ", noOfDays='" + getNoOfDays() + "'" +
+            ", ReturnDate='" + getReturnDate() + "'" +
+            ", RentalDate='" + getRentalDate() + "'" +
             "}";
     }
 
 
-    
+
 }
