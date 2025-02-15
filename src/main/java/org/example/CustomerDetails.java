@@ -12,7 +12,7 @@ public class CustomerDetails {
     private String customerEmailNo = null;
     private String passward = null;
     private Boolean isRentedCar = false;
-    private ArrayList<CarDetails> carRentalHistory = null;
+
 
 
     // define the constructor
@@ -75,14 +75,7 @@ public class CustomerDetails {
         this.isRentedCar = isRentedCar;
     }
 
-    public ArrayList<CarDetails> getCarRentalHistory() {
-        return this.carRentalHistory;
-    }
-
-    public void setCarRentalHistory(ArrayList<CarDetails> carRentalHistory) {
-        this.carRentalHistory = carRentalHistory;
-    }
-
+    
 
     public String getPassward() {
         return this.passward;
@@ -104,7 +97,6 @@ public class CustomerDetails {
             ", customerMobileNumber='" + getCustomerMobileNumber() + "'" +
             ", customerEmailNo='" + getCustomerEmailNo() + "'" +
             ", isRentedCar='" + isIsRentedCar() + "'" +
-            ", carRentalHistory='" + getCarRentalHistory() + "'" +
             "}";
     }
 
